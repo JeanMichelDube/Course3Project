@@ -64,16 +64,16 @@ mergedata$Activity = mergedata$ActivityName
 finaldataMSAct = subset( mergedata, select = -ActivityName )
 
 ##Write first table
-write.table(finaldataMSActNam, "data_with_labels.txt")
+write.table(finaldataMSAct, "data_with_labels.txt")
 
 #Appropriately labels the data set with descriptive variable names.
 
 ##Extract, then replace Column Names
 longNames = featuresMS$V2
-finaldataMSActNam = setnames(finaldataMSAct,3:68,c(longNames))
+finaldataMSAct = setnames(finaldataMSAct,3:68,c(longNames))
 
 #From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 TidyData <- finaldataMSActNam[, lapply(.SD, mean), by = 'Subject,Activity']
 
 ##Write second table
-write.table(TidyData, "tidy_data.txt")
+write.table(TidyData, "tidy_data.txt", row.name=FALSE)
