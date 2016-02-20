@@ -22,3 +22,13 @@ Uses descriptive activity names to name the activities in the data set
 Appropriately labels the data set with descriptive variable names. This data set is named data_with_labels.txt on the repo.
 
 From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject. This data set in named tidy_data.txt on the repo.
+
+## To run the run_analysis.R :
+
+Open R Studio and choose the working directory in which you want the script to operate.
+
+Open run_analysis.R
+
+Execute run_analysis.R.
+
+##Note : run_analysis.R is built to download the project data upon execution. If the data has already been downloaded and unzipped, do skip this step. 
